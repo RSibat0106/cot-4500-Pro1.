@@ -1,3 +1,4 @@
+# Approximation Algorithm
 import math
 
 # Constants
@@ -22,6 +23,7 @@ while diff >= tol:
 
 print(f"\nConvergence after {iter} iterations")
 
+# Bisection Method
 def bisection_method(f, a, b, tol, max_iter):
     left = a
     right = b
@@ -47,6 +49,7 @@ def f(x):
 root = bisection_method(f, 0, 3, 1e-6, 100)
 print("Approximate root:", root)
 
+# Fixed Point Iteration
 def fixed_point_iteration(g, p0, tol, max_iter):
     i = 1  # Iteration counter
 
@@ -71,6 +74,7 @@ def g(x):
 # Call the method with function g, initial guess, tolerance, and max iterations
 root = fixed_point_iteration(g, 1.5, 1e-6, 100)
 
+# Newtons method
 def newtons_method(f, df, p_prev, tol, max_iter):
     i = 1  # Iteration counter
 
